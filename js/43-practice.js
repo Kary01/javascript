@@ -13,5 +13,5 @@ class Animal {
     }
   }
   
-  let rabbit = new Rabbit("White Rabbit"); // Error: this is not defined
+  let rabbit = new Rabbit("White Rabbit");
   alert(rabbit.name);
