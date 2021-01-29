@@ -5,9 +5,9 @@ const PEOPLE_URL = 'people/:id/';
 const CALL_API = {crossDomain: true};
 
 function callback(value){
-    // console.log(arguments); .... check the parameters
+    // console.log(arguments); ....  parameters
     
-    document.write(`Hola soy ${value.name}`);
+    alert(`Hola soy ${value.name}`);
 };
 
 function people(id){
@@ -16,7 +16,7 @@ function people(id){
     $.get(ID_URL, CALL_API, callback);
 };
 
-people(1);
-people(2);
-people(3);
+for (let i = 1; i <= 5; i++) {
+    people(i);
+}
 
