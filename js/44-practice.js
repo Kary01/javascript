@@ -1,8 +1,7 @@
 const API_URL = 'https://swapi.dev/api/';
 const PEOPLE_URL = 'people/:id/';
 
-// request to change the id and call to the api
-const ID_URL = `${API_URL}${PEOPLE_URL.replace(':id', 1)}`;
+
 const CALL_API = {crossDomain: true};
 
 function callback(value){
@@ -11,5 +10,13 @@ function callback(value){
     document.write(`Hola soy ${value.name}`);
 };
 
-$.get(ID_URL, CALL_API, callback);
+function people(id){
+    const ID_URL = `${API_URL}${PEOPLE_URL.replace(':id', id)}`;
+
+    $.get(ID_URL, CALL_API, callback);
+};
+
+people(1);
+people(2);
+people(3);
 
