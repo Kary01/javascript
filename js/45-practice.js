@@ -20,5 +20,13 @@ function onError(value) {
 loadCall(1)
     .then(function(people) {
         alert(`The first person is: ${people.name}`);
+        return loadCall(2);
+    })
+    .then(function(people) {
+        alert(`The first person is: ${people.name}`);
+        return loadCall(3);
+    })
+    .then(function(people) {
+        alert(`The first person is: ${people.name}`);
     })
     .catch(onError);
