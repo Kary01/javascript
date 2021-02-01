@@ -21,7 +21,7 @@ var id = [1, 2, 3, 4, 5, 6, 7, 8];
 
 var promises = id.map(id => loadCall(id));
 Promise.all(promises)
-        .then(people => console.log(people))
+        .then(people => console.table(people))
         .catch(onError)
 
 // loadCall(1)
